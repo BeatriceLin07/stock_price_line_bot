@@ -9,11 +9,11 @@ import requests
 from datetime import datetime
 from pymongo import MongoClient
 import os
-from dotenv import load_dotenv
+
 
 app = Flask(__name__)
 
-load_dotenv()
+
 ALPHA_VANTAGE_API_KEY = os.getenv('ALPHA_VANTAGE_API_KEY')
 ALPHA_VANTAGE_BASE_URL = os.getenv('ALPHA_VANTAGE_BASE_URL')
 LINE_CHANNEL_ACCESS_TOKEN = os.getenv('LINE_CHANNEL_ACCESS_TOKEN')
