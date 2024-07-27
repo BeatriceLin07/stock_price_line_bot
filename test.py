@@ -32,7 +32,6 @@ OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 # Initialize Configuration and WebhookHandler
 configuration = Configuration(
     access_token = LINE_CHANNEL_ACCESS_TOKEN,
-    ssl_ca_cert = '/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/certifi/cacert.pem'  # Add this line
 )
 handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
@@ -40,7 +39,7 @@ handler = WebhookHandler(LINE_CHANNEL_SECRET)
 client = OpenAI(api_key = OPENAI_API_KEY)
 
 # MongoDB configuration
-mongo_client = MongoClient(MONGO_CONNECTION_STRING, tls=True, tlsCAFile='/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/certifi/cacert.pem')
+mongo_client = MongoClient(MONGO_CONNECTION_STRING)
 db = mongo_client['stockbot_db']
 user_queries = db['user_queries']
 
