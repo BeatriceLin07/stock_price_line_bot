@@ -142,5 +142,5 @@ def handle_message(event):
         line_bot_api.reply_message_with_http_info(reply_request)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=4999, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)
 
